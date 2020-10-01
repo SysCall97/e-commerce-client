@@ -1,0 +1,19 @@
+.navbar-container{
+    background-color: black;
+    line-height: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.navbar-container a{
+    text-decoration: none;
+    color: white;
+    padding: 12px 10px;
+    margin-left: 30px;
+    font-size: large;
+}
+
+.navbar-container a:hover{
+    background-color: #ccc;
+}

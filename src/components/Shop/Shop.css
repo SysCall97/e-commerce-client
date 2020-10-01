@@ -1,0 +1,11 @@
+.body-container{
+    display: flex;
+    margin: 0px 30px;
+}
+
+.products{
+    width: 80%;
+    margin-left: 5%;
+    padding-top: 0px;
+    border-right: 1px solid #eee;
+}
