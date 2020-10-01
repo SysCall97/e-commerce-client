@@ -41,6 +41,10 @@ const View = () => {
                         <Shipment />
                     </PrivareRoute>
 
+                    {/* <Route path="/shipment">
+                        <Shipment />
+                    </Route> */}
+
                     <PrivareRoute path="/manage-inventory">
                         <ManageInventory />
                     </PrivareRoute>
