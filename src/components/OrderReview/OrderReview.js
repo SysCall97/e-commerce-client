@@ -1,44 +1,47 @@
 import React from 'react';
-import { getDatabaseCart, removeFromDatabaseCart, processOrder } from '../../utilities/databaseManager';
-import fakeData from '../../fakeData';
+import { getDatabaseCart, removeFromDatabaseCart } from '../../utilities/databaseManager';
 import { useEffect, useState } from 'react';
 import ReviewItem from '../ReviewItem/ReviewItem';
 import Cart from '../Cart/Cart';
 import { Link } from 'react-router-dom';
 
 const OrderReview = () => {
-    const [listedProducts, setListedProducts] = useState([]);
+    const [ProductList, setProductList] = useState([]);
 
     useEffect(() => {
         const savedProductObjects = getDatabaseCart();
-        const listedProductKeys = Object.keys(savedProductObjects);
+        const cartProductKeys = Object.keys(savedProductObjects);
 
-        setListedProducts(listedProductKeys.map(productKey => {
-            const product = fakeData.find(pd => pd.key === productKey);
-            product.quantity = savedProductObjects[productKey];
-            return product;
-        }));
+        fetch('http://localhost:5000/getProductsByKeys', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(cartProductKeys)
+        })
+        .then(res => res.json())
+        .then(data => {
+            setProductList(cartProductKeys.map(key => {
+                const product = data.find(pd => pd.key === key);
+                product.quantity = savedProductObjects[key];
+                return product;
+            }));
+        });
     }, []);
 
     const handleRemoveItem = (key) => {
-        const newListedProductes = listedProducts.filter(pd => pd.key !== key);
-        setListedProducts(newListedProductes);
+        const newListedProductes = ProductList.filter(pd => pd.key !== key);
+        setProductList(newListedProductes);
         removeFromDatabaseCart(key);
     }
 
-
-    // const handlePlaceOrder = () => {
-    //     processOrder();
-    //     if(listedProducts) setPlaceOrder(true);
-    //     setListedProducts([]);
-    // }
 
     return (
         <div className='body-container'>
 
             <div className="products">
                 {
-                    listedProducts.map(
+                    ProductList.map(
                         product => <ReviewItem product={product} handleRemoveCart={handleRemoveItem} key={product.key} />
                     )
                 }
@@ -46,7 +49,7 @@ const OrderReview = () => {
 
 
             <div className="cart">
-                <Cart products={listedProducts}>
+                <Cart products={ProductList}>
                     <Link to="/shipment"><button> Place Order</button></Link>
                 </Cart>
             </div>
