@@ -12,7 +12,7 @@ const OrderReview = () => {
         const savedProductObjects = getDatabaseCart();
         const cartProductKeys = Object.keys(savedProductObjects);
 
-        fetch('http://localhost:5000/getProductsByKeys', {
+        fetch('https://calm-basin-65973.herokuapp.com/getProductsByKeys', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

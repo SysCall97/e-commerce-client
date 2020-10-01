@@ -18,7 +18,7 @@ const Shipment = () => {
         
         const newOrder = {...data, ...products}
         console.log(newOrder);
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://calm-basin-65973.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
