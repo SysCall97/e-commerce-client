@@ -22,7 +22,7 @@ User can:
 - place order after providing the required information
 
 ### Future Task:
-    - Payment integration with the application.
-    - Complete Manage Inventory page.
+- Payment integration with the application.
+- Complete Manage Inventory page.
 
 **Resume:** [https://drive.google.com/file/d/12oxT5yjx6ztnUAtrRBlzxjm2JyvlzU-c/view?]
