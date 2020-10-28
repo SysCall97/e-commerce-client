@@ -15,11 +15,11 @@
 - CSS
 
 ### Key features:
-User can
-    - log in with Gmail, email or github(this was experimental).
-    - add a product to the cart 
-    - remove a product from the cart
-    - place order after providing the required information
+User can:
+- log in with Gmail, email or github(this was experimental).
+- add a product to the cart 
+- remove a product from the cart
+- place order after providing the required information
 
 ### Future Task:
     - Payment integration with the application.
