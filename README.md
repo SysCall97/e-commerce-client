@@ -10,7 +10,7 @@
 - Reack hook form
 - Node Js (for back-end)
 - Mongo DB
-- Firebase authontication
+- Firebase authentication
 - HTML
 - CSS
 
