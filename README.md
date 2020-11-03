@@ -25,4 +25,4 @@ User can:
 - Payment integration with the application.
 - Complete Manage Inventory page.
 
-**Resume:** [https://drive.google.com/file/d/12oxT5yjx6ztnUAtrRBlzxjm2JyvlzU-c/view?]
+**Resume:** [https://drive.google.com/file/d/1uL0DDwMPt7Sd9SfUg4bwe1NBFbOC04U5/view]
