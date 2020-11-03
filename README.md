@@ -7,7 +7,7 @@
 - React js
 - React router dom
 - Bootstrap
-- Reack hook form
+- React hook form
 - Node Js (for back-end)
 - Mongo DB
 - Firebase authentication
