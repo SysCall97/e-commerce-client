@@ -1,4 +1,4 @@
-# Volunteer Network
+# E-Commerce Project
 **Live Site:** [https://e-commerce-by-mashry.web.app/]\
 **Server side code:** [https://github.com/kaziMashry/e-commerce-server]
 
